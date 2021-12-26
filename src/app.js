@@ -15,7 +15,7 @@ const partialPaths = path.join(__dirname, "../templates/partials");
 hbs.registerPartials(partialPaths);
 
 // *Setup handlebars engine and view location
-app.set("view engine", "hbs");
+app.set("view engine", "hbs"); 
 app.set("views", viewsPath);
 
 //* Setup static Directory to serve
