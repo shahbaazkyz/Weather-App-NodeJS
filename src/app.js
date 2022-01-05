@@ -4,7 +4,7 @@ const geocode = require("./utils/geocode");
 const weatherCode = require("./utils/weathercode");
 const hbs = require("hbs");
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 5000;
 
 // *Define Path for Express Config
 const publicAccess = path.join(__dirname, "../public");
@@ -15,7 +15,7 @@ const partialPaths = path.join(__dirname, "../templates/partials");
 hbs.registerPartials(partialPaths);
 
 // *Setup handlebars engine and view location
-app.set("view engine", "hbs"); 
+app.set("view engine", "hbs");
 app.set("views", viewsPath);
 
 //* Setup static Directory to serve
@@ -29,7 +29,6 @@ app.get("", (req, res) => {
     name: "shahbaz Khan",
   });
 });
-
 
 app.get("/about", (req, res) => {
   res.render("about", {
