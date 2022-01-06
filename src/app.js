@@ -53,8 +53,14 @@ app.get("/weather", (req, res) => {
           return res.send({ error });
         } else {
           return res.send({
-            currentTemperature: result.currentTemperature,
-            location,
+            name: result.result.body.name,
+            temperature: result.result.body.main.temp,
+            maxTemp: result.result.body.main.temp_max,
+            minTemp: result.result.body.main.temp_min,
+            feelsLike: result.result.body.main.feels_like,
+            humidity: result.result.body.main.humidity,
+            description: result.result.body.weather[0].description,
+            icon: result.result.body.weather[0].icon,
           });
         }
       });

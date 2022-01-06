@@ -1,77 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&family=Poppins&display=swap");
+
 body {
-  margin: 0;
-  padding: 0;
-}
-.footer {
-  width: 100vw;
-  height: 50px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 28px;
-  text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: blue;
+  /* background-color: #090979 !important; */
+  background-image: url("https://images.unsplash.com/photo-1530975155254-0faede6a2473?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c2t5JTIwZ3JhZGllbnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80");
+  /* background-image: radial-gradient(circle, #00c8ff, #00abff, #008aff, #0060ff, #2500ff); */
+  background-size: cover;
+  background-repeat: no-repeat;
   color: white;
+  /* font-family: 'Courier New', Courier, monospace; */
+  font-family: "Poppins", sans-serif;
 }
 
-.navigation {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 28px;
-  background-color: rgb(54, 54, 235);
-  text-transform: uppercase;
+.App {
+  text-align: center;
 }
 
-ul {
+.App-header {
+  min-height: 100vh;
   display: flex;
-  justify-content: flex-end;
-}
-a {
-  text-decoration: none;
-}
-li {
-  list-style-type: none;
-  color: white;
-  cursor: pointer;
-  margin: 0px 40px;
-}
-
-li:hover {
-  color: brown;
-}
-h1 {
-  color: rgb(121 121 121);
-}
-input {
-  padding: 2px;
-  border-radius: 20px;
-  color: rgb(66, 66, 66);
-  padding-left: 10px;
-  font-size: 14px;
-  text-transform: capitalize; 
-}
-button {
-  width: 83px;
-  padding: 4px;
-  height: 24px;
-  border-radius: 10px;
-  background-color: rgb(0 102 255);
-  cursor: pointer;
-  color: white;
-  border: none;
-  font-size: 14px;
-}
-#message-1 {
-  color: rgb(66, 66, 66);
-  font-size: 32px;
-}
-#message-2 {
-  color: rgb(66, 66, 66);
-  font-size: 24px;
-}
-.weather {
-  display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.report::after {
+  content: "";
+  background-image: url("https://mocah.org/uploads/posts/102517-himalayas-5k-4k-wallpaper-nepal-mountains-sky-clouds.jpg");
+  background-size: cover;
+  opacity: 0.1;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+.report {
+  border: 2px solid #0000001f;
+  font-family: "Merriweather Sans", sans-serif;
+  padding: 34px;
+  position: relative;
+  margin: 48px 0px 17px 0px;
+  width: 50%;
+  height: 370px;
+  border-radius: 5px;
+
+  /* background-color: #09097985; */
+}
+.left {
+  text-align: start;
+  font-family: "Poppins", sans-serif;
+  width: 42%;
+  display: inline-block;
+  margin: 75px 35px 0px -47px;
+}
+.right {
+  text-align: end;
+  display: inline-block;
+  margin: 51px -83px 0px 55px;
+  vertical-align: top;
+  /* display: inline; */
+  width: 40%;
+}
+
+.tempFont {
+  font-size: 7.5vw;
+}
+.minTemp {
+  color: #e74c3c;
+}
+
+.city {
+  font-size: 4vw;
+  line-height: 30px;
+  white-space: nowrap;
+}
+
+.left img {
+  margin: -20px 0px 0px -18px;
+}
+
+.right h3 {
+  margin: 0px 30px 0px 0px;
+}
+
+input {
+  text-transform: uppercase;
+}
+
+input[type="text"]:focus {
+  border: none;
+  box-shadow: inset 0 -1px 0 #ddd;
+}
+
+@media only screen and (max-width: 600px) {
+  .report {
+    width: 100%;
+    padding: 0px;
+    height: 300px;
+  }
+
+  .left {
+    text-align: start;
+    font-family: "Poppins", sans-serif;
+    width: 40%;
+    display: inline-block;
+    margin: 55px 40px 0px 0px;
+  }
+
+  .right {
+    text-align: end;
+    display: inline-block;
+    margin: 50px 0px 0px -34px;
+    vertical-align: top;
+    /* display: inline; */
+    width: 45%;
+  }
+  .right h3 {
+    margin: 0px;
+  }
+  .tempFont {
+    font-size: 18vw;
+  }
+  .city {
+    font-size: 9vw;
+  }
+}
+
+/* No greater than 900px, no less than 601px */
+@media (max-width: 920px) and (min-width: 601px) {
+  .report {
+    width: 100%;
+    padding: 0px;
+    height: 385px;
+  }
+
+  .left {
+    text-align: start;
+    font-family: "Poppins", sans-serif;
+    width: 40%;
+    display: inline-block;
+    margin: 84px 40px 0px 0px;
+  }
+
+  .right {
+    text-align: end;
+    display: inline-block;
+    margin: 54px 0px 0px -34px;
+    vertical-align: top;
+    /* display: inline; */
+    width: 45%;
+  }
+
+  .right h3 {
+    margin: 0px;
+  }
+
+  .tempFont {
+    font-size: 18vw;
+  }
+
+  .city {
+    font-size: 9vw;
+  }
+}
+
+/* No greater than 1200px, no less than 601px */
+@media (max-width: 1200px) and (min-width: 880px) {
+  .report {
+    width: 100%;
+    padding: 0px;
+    height: 350px;
+  }
+
+  .left {
+    text-align: start;
+    font-family: "Poppins", sans-serif;
+    width: 40%;
+    display: inline-block;
+    margin: 84px 40px 0px 0px;
+  }
+
+  .right {
+    text-align: end;
+    display: inline-block;
+    margin: 54px 0px 0px -34px;
+    vertical-align: top;
+    /* display: inline; */
+    width: 45%;
+  }
+
+  .right h3 {
+    margin: 0px;
+  }
+
+  .tempFont {
+    font-size: 10vw;
+  }
+
+  .city {
+    font-size: 6vw;
+  }
+}
+
+.footer {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.footer p {
+  margin: 0 0 15px;
+}
+.footer i {
+  padding: 0 3px;
+  color: black;
+  font-size: medium;
+}
+.footer a {
+  margin-left: 3px;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  text-decoration: none;
+}
+.footer a:hover {
+  color: #e74c3c;
+  text-decoration: underline;
+}
+.footer a i {
+  padding-left: 0;
+}
+.footer .fa-heart {
+  color: #e74c3c;
+}
+#error {
+  display: none;
+  color: red;
+  background-color: rgb(0, 0, 0);
+  padding: 12px;
+  border-radius: 10px;
+}
+.report {
+  display: none;
 }

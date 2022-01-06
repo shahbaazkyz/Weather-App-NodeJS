@@ -9,6 +9,7 @@ const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lo
       callback(response.body.error);
     } else {
       callback(undefined, {
+        result : response,
         currentTemperature: response.body.main.temp,
       });
     }

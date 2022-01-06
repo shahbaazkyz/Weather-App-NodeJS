@@ -1,29 +1,86 @@
-<!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>About</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <script src="https://use.fontawesome.com/5b2866694e.js"></script>
 
-<body>
-    {{>navigation}}
-   <div class="weather">
-        <h1>Weather reports.</h1>
-        
-      
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <title>Weather App.</title>
+  </head>
+
+  <body>
+    <div class="App">
+      <header class="App-header">
+
+        <h1 id="error"></h1>
+        <div class="report">
+          <div class="left">
+            <h3 class="city"></h3>
+            <p class="date">
+
+            </p>
+            <img src="" alt="" id="image" />
+            <b>
+              <h5 class="description"></h5>
+            </b>
+          </div>
+          <div class="right">
+            <h1 class="tempFont">
+            </h1>
+            <h3 class="maxTemp">
+              °/
+              <span class="minTemp">
+              </span>
+            </h3>
+            <h3 class="feelsLike">
+            </h3>
+            <h3 class="humidity"></h3>
+          </div>
+        </div>
+
+        <h1>Weather App</h1>
+
         <form>
-            <input type="text">
-            <button>Search</button>
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control border rounded-top"
+              placeholder="Enter City Name"
+              aria-label="Entery City Name"
+              aria-describedby="button-addon2"
+            />
+            <button type="submit" class="btn btn-light" id="button-addon2">
+              Search
+            </button>
+          </div>
         </form>
-        <p id="message-1"></p>
-        <p id="message-2"></p>
-   </div>
-    {{>footer}}
+
+     
+
+        {{>footer}}
+      </header>
+    </div>
+
     <script src="/js/app.js"></script>
-</body>
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </body>
 
 </html>
